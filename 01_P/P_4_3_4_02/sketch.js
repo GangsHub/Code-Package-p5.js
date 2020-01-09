@@ -35,7 +35,7 @@ var icons;
 
 // You will have to download the emoji files first
 // Please see https://github.com/generative-design/Code-Package-p5.js/tree/master/data
-var emojisPath = '../../data/twemoji/';
+var emojisPath = 'https://github.com/twitter/twemoji/tree/master/assets/72x72';
 var tree;
 
 var recording = false;
@@ -43,12 +43,12 @@ var recording = false;
 function preload() {
   icons = {};
   for (var name in emojis) {
-    icons[name] = loadImage(emojisPath + '16x16/' + name + '.png');
+    icons[name] = loadImage(emojisPath + '72x72/' + name + '.png');
   }
 }
 
 function setup(){
-  createCanvas(80 * 16, 60 * 16);
+  createCanvas(80 * 72, 60 * 72);
 
   // setup kdTree to find neareast color in a speedy way
   var colors = [];
